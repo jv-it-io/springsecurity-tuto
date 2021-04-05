@@ -49,17 +49,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         UserDetails johnUser = User.builder()
                 .username("john")
                 .password(passwordEncoder.encode("password"))
-                .roles(FAN.name()).build();
+                .roles(FAN.name()).build(); //it's a fan
 
         UserDetails jojoUser = User.builder()
                 .username("jojo")
                 .password(passwordEncoder.encode("ohmygod"))
-                .roles(ADMIN.name()).build();
+                .roles(ADMIN.name()).build(); //it's an admin
 
         UserDetails jotaroUser = User.builder()
                 .username("jotaro")
                 .password(passwordEncoder.encode("password"))
-                .roles(ADMINTRAINEE.name()).build();
+                .roles(ADMINTRAINEE.name()).build();//it's a futur admin
 
         return new InMemoryUserDetailsManager(johnUser,jojoUser,jotaroUser);
     }
