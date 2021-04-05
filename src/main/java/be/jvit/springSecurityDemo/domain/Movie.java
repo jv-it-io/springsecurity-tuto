@@ -17,4 +17,12 @@ public class Movie{
     public String getMovieName() {
         return movieName;
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "movieId=" + movieId +
+                ", movieName='" + movieName + '\'' +
+                '}';
+    }
 }
